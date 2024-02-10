@@ -12,5 +12,6 @@ ENV PYTHONUNBUFFERED 1
 RUN pip install --upgrade pip
 
 COPY . $DockerHOME
+COPY run_server.sh $DockerHOME
 RUN pip install -r requirements.txt
-RUN chmod +x run_server.sh
+RUN chmod +x /app/run_server.sh
